@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      * {box-sizing: border-box}
+body { margin:0}
+
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.heading, #text1{
+
+text-align: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: black;
+}
+
+.prop{
+  font-size:2rem;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.mySlides img{
+ width:100%;
+  height:35rem;
+}
+
+form {font-family: Arial, Helvetica, sans-serif;}
+form {box-sizing: border-box}
+form{
+  width:80%;
+ margin-left:9rem;
+ background-color: lightblue;
+}
+/* Full-width input fields */
+.a1{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.signupbtn {
+  width: 30%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  width:90%;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#linking{
+  margin-top:10%;
+   margin-bottom:10%;
+
+    text-align:center;
+ 
+}
+#link1{
+  font-size:20px;
+  width:100%;
+
+}
+
+    </style>
+    </head>
+  <body>
+<h1 class="heading">COVID - 19 HELP CENTER</h1>
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <img src="beds.jpg" />
+  <figcaption class="prop">Availability of Beds</figcaption>
+</div>
+
+<div class="mySlides">
+  <img src="oxygen.jpg" />
+<figcaption class="prop">Availability of Oxygen Cylinders</figcaption>
+</div>
+
+<div class="mySlides">
+  <img src="remdesivir.jpg" />
+<figcaption class="prop">Availability of Remdesivir</figcaption>
+</div>
+
+<div class="mySlides">
+  <img src="vaccine.jpg" />
+<figcaption class="prop">Availability of COVID - 19 Vaccine</figcaption>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br><br>
+<h2 id="text1" >Submit Details</h2>
+<div class="formdiv">
+<form action="/admin" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required class="a1">
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required class="a1">
+    
+        <label for="mobile"><b>Mobile Number</b></label>
+    <input type="number" placeholder="Enter Mobile Number" name="mobile" required class="a1">
+
+   <label for="gender"><b>Gender</b></label>
+    <br><br>
+    <input type="radio" value="MALE" name="gender" required >&nbsp&nbspMALE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="radio" value="FEMALE" name="gender" required>&nbsp&nbspFEMALE
+    <br><br>
+ <label for="age"><b>Age</b></label>
+    <input type="number" placeholder="Enter Age" name="age" required class="a1">
+
+    <label for="address"><b>Address Line 1</b></label>
+    <input type="text" placeholder="Flat/Room/Door/Block no and Landmark" name="address" required class="a1">
+        <label for="address2"><b>Address Line 2</b></label>
+    <input type="text" placeholder="Area/Locality/Taluka" name="address2" required class="a1">
+           <label for="address3"><b>City and State</b></label>
+    <input type="text" placeholder="Enter City and State" name="address3" required class="a1">
+
+
+ 	<label for="pincode"><b>Pincode</b></label>
+    <input type="number" placeholder="Enter Pincode" name="pincode" required class="a1">
+    	<label for="details"><b>Details</b></label>
+    <input type="text" placeholder="Tell us how we can help" name="details" required class="a1">
+  
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
+<div id="linking">
+  <span id="link1"><b>If you are willing to help in these difficult times and can provide us with any medical help possible,<br> please click on the link below to look for the needy ones and contact them as soon as possible</b></span>
+  <p style="text-align:center;font-size:30px;"><b><a href="/get-data">HELP THE NEEDY ONES</a></b></p>
+  </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+$(".signupbtn").click(function(){
+alert("Your details have been Submitted.");
+});
+</script>
+
+</body>
+</html> 

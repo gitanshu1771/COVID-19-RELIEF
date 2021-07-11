@@ -1,0 +1,146 @@
+<!DOCTYPE>
+<html>
+    <head>
+<style>
+    .item{
+      border:1px solid;
+      margin:5%;
+    }
+    {{!-- #bold{
+        font-size:20px;
+        font-weight: bold;
+    } --}}
+    table th{
+        font-size:20px;
+        width:55%;
+        text-align:left;
+        padding-left:3%;
+    }
+    table td{
+        font-size:18px;
+    }
+    table{
+      
+      border:1px solid;
+      margin:5%;
+      width:50%;
+    } 
+    
+    {{!-- table{
+        border:1px solid;
+        text-align:center;
+       
+        margin:3%;
+        width:90%;
+        font-size: 20px;;
+    }
+    
+   table tr{
+        width:50%;
+    }
+    td,th{
+        padding:2%;
+        
+    } --}}
+</style>
+    </head>
+    <body>
+        <div class="get">
+            {{# each items}}
+            {{!-- <article class="item">
+                <div><span id="bold">Name:</span> {{this.name}}</div>
+                <div><span id="bold">Email:</span> {{this.email}}</div>
+                <div><span id="bold">Phone Number:</span> {{this.mobile}}</div>
+                <div><span id="bold"> Gender:</span> {{this.gender}}</div>
+              <div> <span id="bold">Flat No. and Landmark:</span> {{this.address}}</div>
+              <div><span id="bold"> Area/Locality: </span>{{this.address2}}</div>
+              <div><span id="bold"> City and State:</span> {{this.address3}}</div>
+              <div><span id="bold"> Pincode: </span>{{this.pincode}}</div>
+              <div><span id="bold"> Details: </span> {{this.details}}</div>
+            
+            </article> --}}
+
+        {{!-- <fieldset> --}}
+<center>
+<table cellspacing=10>
+<form>
+<tr><th>Name</th><td>{{this.name}}</td></tr>
+<tr><th>Email</th><td>{{this.email}}</td></tr>
+<tr><th>Phone Number</th><td>{{this.mobile}}</td></tr>
+<tr><th>Gender</th><td>{{this.gender}}</td></tr>
+<tr><th>Flat No. and Landmark</th><td>{{this.address}}</td></tr>
+<tr><th>Area/Locality</th><td>{{this.address2}}</td></tr>
+<tr><th>City and State</th><td>{{this.address3}}</td></tr>
+<tr><th>Pincode</th><td>{{this.pincode}}</td></tr>
+<tr><th>Details</th><td>{{this.details}}</td></tr>
+</form>
+</center>
+</table>
+{{!-- </fieldset> --}}
+
+
+            {{!-- <table class="a1">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                    <th>
+                        Gender
+                        </th>
+                    <th>
+                        Flat No. and Landmark
+                    </th>
+                    <th>
+                        Area/Locality
+                    </th>
+                    <th>
+                        City and State
+                    </th>
+                    <th>
+                        Pincode
+                    </th>
+                    <th>
+                        Details
+                    </th>
+                </tr>
+               
+                <tr>
+                    <td>
+                        {{this.name}}
+                    </td>
+                    <td>
+                        {{this.email}}
+                    </td>
+                    <td>
+                        {{this.mobile}}
+                    </td>
+                    <td>
+                        {{this.gender}}
+                    </td>
+                    <td>
+                        {{this.address}}
+                    </td>
+                    <td>
+                        {{this.address2}}
+                    </td>
+                    <td>
+                        {{this.address3}}
+                    </td>
+                    <td>
+                        {{this.pincode}}
+                    </td>
+                    <td>
+                        {{this.details}}
+                    </td>
+                </tr>
+            </table> --}}
+            {{/each}}
+        </div>
+    </body>
+</html>
